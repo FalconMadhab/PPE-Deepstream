@@ -22,6 +22,8 @@ PPE detection Application consists of an Intelligent Video Analytics Pipeline po
 
 This project is a proof-of-concept, trying to monitor the safety of workers on a construction site using Computer Vision and and is accelerated using NVIDIA Deepstream and can be done with a surveillance camera and an onboard Jetson platform.
 
+This project detects objects of these 7 classes-head, helmet, mask, headset, chest, vest and person
+
 ## Deepstream Setup
 
 This post assumes you have a fully functional Jetson device. If not, you can refer the documentation [here](https://docs.nvidia.com/jetson/jetpack/install-jetpack/index.html).
@@ -51,7 +53,7 @@ sudo apt-get install ./deepstream-5.1_5.1.0-1_arm64.deb
 
 ### 1. Clone the repository
 
-This is a straightforward step, however, if you are new to git or git-lfs, I recommend glancing threw the steps.
+This is a straightforward step, however, if you are new to git or git-lfs, I recommend glancing through the steps.
 
 First, install git and git-lfs
 
@@ -69,7 +71,7 @@ git clone https://github.com/FalconMadhab/PPE-Deepstream.git
 git@github.com:FalconMadhab/PPE-Deepstream.git
 ```
 
-## 2. Weights: [here]()
+## 2. Weights: [here](https://drive.google.com/file/d/1y-XouaZKwFPY07-3plXhQ8WJUwg-_VZ2/view?usp=sharing)
 Download the weights file from the above link and move to this folder
 
 ## 3. Compile
@@ -133,5 +135,10 @@ deepstream-app -c deepstream_app_config.txt
 
 ## Video demonstration of the App
 
-Link to video demonstartion [video_link]()
+Link to video demonstartion [video_link](https://www.youtube.com/watch?v=p6SHAQUwRls)
 
+## Referernces
+- VW-PPE dataset + paper: http://aimir.isti.cnr.it/vw-ppe
+- Colored helmets dataset: https://github.com/wujixiu/helmet-detection
+- Darknet repository (training only): https://github.com/AlexeyAB/darknet
+- YOLOv4 Tensorflow implementation (testing): https://github.com/hunglc007/tensorflow-yolov4-tflite
